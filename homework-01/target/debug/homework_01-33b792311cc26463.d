@@ -1,0 +1,1 @@
+/home/shurikdima/programming/rust/rust-course/homework-01/target/debug/homework_01-33b792311cc26463: /home/shurikdima/programming/rust/rust-course/homework-01/src/tests_provided.rs /home/shurikdima/programming/rust/rust-course/homework-01/src/problem1.rs /home/shurikdima/programming/rust/rust-course/homework-01/src/lib.rs
