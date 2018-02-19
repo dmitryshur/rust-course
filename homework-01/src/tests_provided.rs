@@ -17,13 +17,13 @@ fn test_sum_small() {
     assert_eq!(sum(&array), 15);
 }
 
-//// Part 2
+// Part 2
 
-//#[test]
-//fn test_dedup_small() {
-    //let vs = vec![1,2,2,3,4,1];
-    //assert_eq!(dedup(&vs), vec![1,2,3,4]);
-//}
+#[test]
+fn test_dedup_small() {
+    let vs = vec![1,2,2,3,4,1];
+    assert_eq!(dedup(&vs), vec![1,2,3,4]);
+}
 
 //// Part 3
 
