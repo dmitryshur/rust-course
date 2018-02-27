@@ -11,13 +11,16 @@ pub fn dedup(vs: &Vec<i32>) -> Vec<i32> {
         if *value_count == 0 {
             new_vec.push(*value);
         }
-        
+
     }
     new_vec
 }
 
 pub fn filter(vs: &Vec<i32>, pred: &Fn(i32) -> bool) -> Vec<i32> {
-   let filtered_vec = vs.clone().into_iter().filter(|&num| pred(num)).collect::<Vec<_>>();
+    let filtered_vec = vs.clone()
+        .into_iter()
+        .filter(|&num| pred(num))
+        .collect::<Vec<_>>();
 
     filtered_vec
 }
