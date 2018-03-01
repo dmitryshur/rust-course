@@ -1,8 +1,7 @@
 #![cfg(test)]
 use problem1::{sum, dedup, filter};
-use problem2::mat_match;
+use problem2::{mat_match, mat_mult};
 
-//use problem2::mat_mult;
 //use problem3::sieve;
 //use problem4::{hanoi, Peg};
 
@@ -51,25 +50,39 @@ fn test_matching_mat() {
         ),
         false
     );
-    assert_eq!(mat_match(
-        &vec![vec![1., 2., 3., 4., 5.]; 3],
-        &vec![vec![1., 2., 3.]; 5],
-    ), true);
+    assert_eq!(
+        mat_match(
+            &vec![vec![1., 2., 3., 4., 5.]; 3],
+            &vec![vec![1., 2., 3.]; 5],
+        ),
+        true
+    );
 }
-//#[test]
-//fn test_mat_mult_identity() {
-//let mut mat1 = vec![vec![0.;3]; 3];
-//for i in 0..mat1.len() {
-//mat1[i][i] = 1.;
-//}
-//let mat2 = vec![vec![5.;3]; 3];
-//let result = mat_mult(&mat1, &mat2);
-//for i in 0..result.len() {
-//for j in 0..result[i].len() {
-//assert_eq!(result[i][j], mat2[i][j]);
-//}
-//}
-//}
+
+#[test]
+fn test_mult() {
+    assert_eq!(
+        mat_match(
+            &vec![vec![1., 2., 3.], vec![4., 5., 6.]],
+            &vec![vec![7., 8.], vec![9., 10.], vec![11., 12.]],
+        ),
+        true
+    );
+}
+#[test]
+fn test_mat_mult_identity() {
+    let mut mat1 = vec![vec![0.; 3]; 3];
+    for i in 0..mat1.len() {
+        mat1[i][i] = 1.;
+    }
+    let mat2 = vec![vec![5.; 3]; 3];
+    let result = mat_mult(&mat1, &mat2);
+    for i in 0..result.len() {
+        for j in 0..result[i].len() {
+            assert_eq!(result[i][j], mat2[i][j]);
+        }
+    }
+}
 
 ////
 //// Problem 3
